@@ -1,4 +1,4 @@
 module LeapYear (isLeapYear) where
 
 isLeapYear :: Integer -> Bool
-isLeapYear year = error "You need to implement this function."
+isLeapYear year = (mod year 4 == 0) && not ((mod year 100 == 0) && not (mod year 400 == 0))
